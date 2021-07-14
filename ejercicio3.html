@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h2>
+                Resultado: <span class="resultado"></span>
+            </h2>
+            <div>
+                <div>
+                    <div>
+                        <label for="">Valor 1</label>
+                        <input id="valor1" type="number" value="0">
+                    </div>
+                    <div>
+                        <label for="">Valor 2</label>
+                        <input id="valor2" type="number" value="0">
+                    </div>
+                    <div style="display: flex">
+                        <button id="btn-sumar" type="button">
+                            Sumar
+                        </button>
+                        <button id="btn-restar" type="button">
+                            Restar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    // Escríbe aquí tu código
+
+    document.getElementById("btn-sumar").addEventListener("click",()=>{
+        document.getElementsByClassName("resultado")[0].innerHTML=(parseInt(document.getElementById("valor1").value)+parseInt(document.getElementById("valor2").value));
+    });
+    document.getElementById("btn-restar").addEventListener("click",()=>{
+        document.getElementsByClassName("resultado")[0].innerHTML=document.getElementById("valor1").value-document.getElementById("valor2").value;
+    });
+    </script>
+</body>
+
+</html>
